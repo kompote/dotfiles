@@ -2,10 +2,12 @@
 
 set -eufo pipefail
 set +x
+sudo apt-get install -y ripgrep xz-utils
+
 if [ "$(command -v curl)" ]; then
-    sudo sh -c "$(curl -fsSL https://nixos.org/nix/install)"
+    sh -c "$(curl -fsSL https://nixos.org/nix/install)"
 elif [ "$(command -v wget)" ]; then
-    sudo sh -c "$(wget -qO- https://nixos.org/nix/install)"
+    sh -c "$(wget -qO- https://nixos.org/nix/install)"
 else
     echo "To install nixos, you must have curl or wget installed." >&2
     exit 1
