@@ -2,7 +2,7 @@
 
 set -eufo pipefail
 set +x
-sudo apt-get install -y ripgrep xz-utils
+sudo apt-get install -y ripgrep xz-utils &&
 
 if [ "$(command -v curl)" ]; then
     sh -c "$(curl -fsSL https://nixos.org/nix/install)"
