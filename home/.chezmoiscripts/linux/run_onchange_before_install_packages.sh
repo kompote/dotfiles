@@ -1,3 +1,3 @@
 #!/bin/bash
-
-sudo apt-get install -y ripgrep xz
+set +x
+sudo apt-get install -y ripgrep xz-utils
